@@ -9,7 +9,7 @@ jobs:
     # https://github.com/marketplace/actions/freebsd-vm
     # https://github.com/vmactions/freebsd-vm
     runs-on: ubuntu-latest
-    name: run tests on FreeBSD
+    name: run tests on FreeBSD 0
     steps:
     - uses: actions/checkout@v4
     - name: Test in FreeBSD
@@ -19,6 +19,7 @@ jobs:
         usesh: true
         run: |
           env
+          echo $SHELL
           set -e -x
           pwd
           ls -lah
@@ -33,7 +34,7 @@ jobs:
     # https://github.com/marketplace/actions/freebsd-vm
     # https://github.com/vmactions/freebsd-vm
     runs-on: ubuntu-latest
-    name: run tests on FreeBSD
+    name: run tests on FreeBSD 1
     steps:
     - uses: actions/checkout@v4
     - name: Test in FreeBSD
@@ -42,6 +43,7 @@ jobs:
       with:
         run: |
           env
+          echo $SHELL
           pwd
           ls -lah
           whoami
@@ -55,7 +57,7 @@ jobs:
     # https://github.com/marketplace/actions/freebsd-vm
     # https://github.com/vmactions/freebsd-vm
     runs-on: ubuntu-latest
-    name: run tests on FreeBSD
+    name: run tests on FreeBSD 2
     steps:
     - uses: actions/checkout@v4
     - name: Test in FreeBSD
@@ -64,6 +66,7 @@ jobs:
       with:
         run: |
           env
+          echo $SHELL
           set -x
           pwd
           ls -lah
