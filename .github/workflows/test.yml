@@ -9,12 +9,12 @@ jobs:
     # https://github.com/marketplace/actions/freebsd-vm
     # https://github.com/vmactions/freebsd-vm
     runs-on: ubuntu-latest
-    name: run tests on FreeBSD 0
+    name: run tests on FreeBSD 0 (usesh: true + set -e -x)
     steps:
     - uses: actions/checkout@v4
     - name: Test in FreeBSD
       id: test
-      uses: vmactions/freebsd-vm@v1
+      uses: vmactions/freebsd-vm@v1.2.0
       with:
         usesh: true
         run: |
@@ -33,12 +33,12 @@ jobs:
     # https://github.com/marketplace/actions/freebsd-vm
     # https://github.com/vmactions/freebsd-vm
     runs-on: ubuntu-latest
-    name: run tests on FreeBSD 1
+    name: run tests on FreeBSD 1 (default)
     steps:
     - uses: actions/checkout@v4
     - name: Test in FreeBSD
       id: test
-      uses: vmactions/freebsd-vm@v1
+      uses: vmactions/freebsd-vm@v1.2.0
       with:
         run: |
           echo "SHELL: $0"
@@ -55,12 +55,12 @@ jobs:
     # https://github.com/marketplace/actions/freebsd-vm
     # https://github.com/vmactions/freebsd-vm
     runs-on: ubuntu-latest
-    name: run tests on FreeBSD 2
+    name: run tests on FreeBSD 2 (default + set -x)
     steps:
     - uses: actions/checkout@v4
     - name: Test in FreeBSD
       id: test
-      uses: vmactions/freebsd-vm@v1
+      uses: vmactions/freebsd-vm@v1.2.0
       with:
         run: |
           set -x
