@@ -18,13 +18,14 @@ jobs:
       with:
         usesh: true
         run: |
+          env
           set -e -x
           pwd
           ls -lah
           whoami
           freebsd-version
-          mkdir
-          mkdir
+          mkdir foo
+          mkdir foo
           ls
 
   freebsd-vm_1:
@@ -40,12 +41,13 @@ jobs:
       uses: vmactions/freebsd-vm@v1
       with:
         run: |
+          env
           pwd
           ls -lah
           whoami
           freebsd-version
-          mkdir
-          mkdir
+          mkdir foo
+          mkdir foo
           ls
 
   freebsd-vm_2:
@@ -61,11 +63,12 @@ jobs:
       uses: vmactions/freebsd-vm@v1
       with:
         run: |
+          env
           set -x
           pwd
           ls -lah
           whoami
           freebsd-version
-          mkdir
-          mkdir
+          mkdir foo
+          mkdir foo
           ls
