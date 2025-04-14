@@ -1,0 +1,69 @@
+name: test
+
+jobs:
+
+  freebsd-vm_0:
+    # https://github.com/marketplace/actions/checkout
+    # https://github.com/marketplace/actions/freebsd-vm
+    # https://github.com/vmactions/freebsd-vm
+    runs-on: ubuntu-latest
+    name: run tests on FreeBSD
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test in FreeBSD
+      id: test
+      uses: vmactions/freebsd-vm@v1
+      with:
+        usesh: true
+        run: |
+          set -e -x
+          pwd
+          ls -lah
+          whoami
+          freebsd-version
+          mkdir
+          mkdir
+          ls
+
+  freebsd-vm_1:
+    # https://github.com/marketplace/actions/checkout
+    # https://github.com/marketplace/actions/freebsd-vm
+    # https://github.com/vmactions/freebsd-vm
+    runs-on: ubuntu-latest
+    name: run tests on FreeBSD
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test in FreeBSD
+      id: test
+      uses: vmactions/freebsd-vm@v1
+      with:
+        run: |
+          pwd
+          ls -lah
+          whoami
+          freebsd-version
+          mkdir
+          mkdir
+          ls
+
+  freebsd-vm_2:
+    # https://github.com/marketplace/actions/checkout
+    # https://github.com/marketplace/actions/freebsd-vm
+    # https://github.com/vmactions/freebsd-vm
+    runs-on: ubuntu-latest
+    name: run tests on FreeBSD
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test in FreeBSD
+      id: test
+      uses: vmactions/freebsd-vm@v1
+      with:
+        run: |
+          set -x
+          pwd
+          ls -lah
+          whoami
+          freebsd-version
+          mkdir
+          mkdir
+          ls
