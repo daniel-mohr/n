@@ -18,16 +18,15 @@ jobs:
       with:
         usesh: true
         run: |
-          env
-          echo $SHELL
           set -e -x
+          echo "SHELL: $0"
+          ps -p $$
           pwd
-          ls -lah
           whoami
           freebsd-version
           mkdir foo
           mkdir foo
-          ls
+          ls -lah
 
   freebsd-vm_1:
     # https://github.com/marketplace/actions/checkout
@@ -42,15 +41,14 @@ jobs:
       uses: vmactions/freebsd-vm@v1
       with:
         run: |
-          env
-          echo $SHELL
+          echo "SHELL: $0"
+          ps -p $$
           pwd
-          ls -lah
           whoami
           freebsd-version
           mkdir foo
           mkdir foo
-          ls
+          ls -lah
 
   freebsd-vm_2:
     # https://github.com/marketplace/actions/checkout
@@ -65,13 +63,12 @@ jobs:
       uses: vmactions/freebsd-vm@v1
       with:
         run: |
-          env
-          echo $SHELL
           set -x
+          echo "SHELL: $0"
+          ps -p $$
           pwd
-          ls -lah
           whoami
           freebsd-version
           mkdir foo
           mkdir foo
-          ls
+          ls -lah
