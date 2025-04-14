@@ -72,3 +72,26 @@ jobs:
           mkdir foo
           mkdir foo
           ls -lah
+
+  freebsd-vm_3:
+    # https://github.com/marketplace/actions/checkout
+    # https://github.com/marketplace/actions/freebsd-vm
+    # https://github.com/vmactions/freebsd-vm
+    runs-on: ubuntu-latest
+    name: run tests on FreeBSD 3 (default and set e)
+    steps:
+    - uses: actions/checkout@v4
+    - name: Test in FreeBSD
+      id: test
+      uses: vmactions/freebsd-vm@v1.2.0
+      with:
+        run: |
+          set -e
+          echo "SHELL: $0"
+          ps -p $$
+          pwd
+          whoami
+          freebsd-version
+          mkdir foo
+          mkdir foo
+          ls -lah
