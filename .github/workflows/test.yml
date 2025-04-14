@@ -9,7 +9,7 @@ jobs:
     # https://github.com/marketplace/actions/freebsd-vm
     # https://github.com/vmactions/freebsd-vm
     runs-on: ubuntu-latest
-    name: run tests on FreeBSD 0 (usesh: true + set -e -x)
+    name: run tests on FreeBSD 0 (usesh true and set e x)
     steps:
     - uses: actions/checkout@v4
     - name: Test in FreeBSD
@@ -55,7 +55,7 @@ jobs:
     # https://github.com/marketplace/actions/freebsd-vm
     # https://github.com/vmactions/freebsd-vm
     runs-on: ubuntu-latest
-    name: run tests on FreeBSD 2 (default + set -x)
+    name: run tests on FreeBSD 2 (default and set x)
     steps:
     - uses: actions/checkout@v4
     - name: Test in FreeBSD
