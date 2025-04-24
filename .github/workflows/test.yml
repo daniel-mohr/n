@@ -101,7 +101,7 @@ jobs:
     # https://github.com/marketplace/actions/freebsd-vm
     # https://github.com/vmactions/freebsd-vm
     runs-on: ubuntu-latest
-    name: run tests on FreeBSD 1 (usesh true and default)
+    name: run tests on FreeBSD 4 (usesh true and default)
     steps:
     - uses: actions/checkout@v4
     - name: Test in FreeBSD
